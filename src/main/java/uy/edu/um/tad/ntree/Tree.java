@@ -1,7 +1,7 @@
 /**
  * 
  */
-package uy.edu.um.TADs.ntree;
+package uy.edu.um.tad.ntree;
 
 /**
  * @author danielpereda

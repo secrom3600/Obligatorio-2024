@@ -1,7 +1,10 @@
 /**
  * 
  */
-package uy.edu.um.TADs.ntree;
+package uy.edu.um.tad.ntree;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +13,8 @@ import java.util.List;
  * @author danielpereda
  *
  */
+@Setter
+@Getter
 public class TreeImpl<T> implements Tree<T> {
 
 	private T value;
@@ -18,7 +23,7 @@ public class TreeImpl<T> implements Tree<T> {
 	
 	/**
 	 * Constructor
-	 * @param oValue
+	 * @paramoValue
 	 */
 	public TreeImpl(T oValue) {
 		value = oValue;

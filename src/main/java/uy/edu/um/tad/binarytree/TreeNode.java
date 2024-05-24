@@ -1,7 +1,10 @@
 /**
  * 
  */
-package uy.edu.um.TADs.binarytree;
+package uy.edu.um.tad.binarytree;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +13,9 @@ import java.util.List;
  * @author pegardan
  *
  */
+@Getter
+@Setter
+
 public class TreeNode<T extends Comparable<T>> {
 
 	private T value;
@@ -156,27 +162,15 @@ public class TreeNode<T extends Comparable<T>> {
 		return colList;
 	}
 
-	public T getValue() {
-		return value;
-	}
-
-	public void setValue(T value) {
+    public void setValue(T value) {
 		this.value = value;
 	}
 
-	public TreeNode<T> getLeft() {
-		return left;
-	}
-
-	public void setLeft(TreeNode<T> left) {
+    public void setLeft(TreeNode<T> left) {
 		this.left = left;
 	}
 
-	public TreeNode<T> getRight() {
-		return right;
-	}
-
-	public void setRigth(TreeNode<T> rigth) {
+    public void setRigth(TreeNode<T> rigth) {
 		this.right = rigth;
 	}
 

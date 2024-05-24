@@ -1,7 +1,10 @@
 /**
  * 
  */
-package uy.edu.um.TADs.binarytree;
+package uy.edu.um.tad.binarytree;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +14,9 @@ import java.util.List;
  * @param <T>
  *
  */
+@Getter
+@Setter
+
 public class SearchBinaryTreeImpl<T extends Comparable<T>> implements
 		BinaryTree<T> {
 
