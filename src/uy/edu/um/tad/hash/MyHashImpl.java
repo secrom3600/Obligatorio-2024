@@ -1,7 +1,7 @@
-package src.uy.edu.um.TADs.binarytree.hash;
+package src.uy.edu.um.tad.hash;
 
-import uy.edu.um.adt.linkedlist.MyLinkedListImpl;
-import uy.edu.um.adt.linkedlist.MyList;
+import src.uy.edu.um.tad.linkedlist.MyLinkedListImpl;
+import src.uy.edu.um.tad.linkedlist.MyList;
 
 import java.util.HashMap;
 

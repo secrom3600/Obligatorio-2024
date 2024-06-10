@@ -1,4 +1,4 @@
-package uy.edu.um.tad.linkedlist;
+package src.uy.edu.um.tad.linkedlist;
 
 public interface MyList<T> {
 

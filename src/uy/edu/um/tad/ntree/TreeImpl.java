@@ -1,7 +1,7 @@
 /**
  * 
  */
-package uy.edu.um.tad.ntree;
+package src.uy.edu.um.tad.ntree;
 
 import lombok.Getter;
 import lombok.Setter;

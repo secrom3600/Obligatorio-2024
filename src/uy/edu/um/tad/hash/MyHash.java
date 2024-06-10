@@ -1,9 +1,9 @@
 /**
  * 
  */
-package src.uy.edu.um.TADs.binarytree.hash;
+package src.uy.edu.um.tad.hash;
 
-import uy.edu.um.adt.linkedlist.MyList;
+import src.uy.edu.um.tad.linkedlist.MyList;
 
 public interface MyHash<Key, Value> {
 

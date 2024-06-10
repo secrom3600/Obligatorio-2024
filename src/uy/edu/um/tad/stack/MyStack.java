@@ -1,4 +1,4 @@
-package uy.edu.um.tad.stack;
+package src.uy.edu.um.tad.stack;
 
 
 public interface MyStack<T> {

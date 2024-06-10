@@ -1,7 +1,7 @@
 /**
  * 
  */
-package uy.edu.um.tad.binarytree;
+package src.uy.edu.um.tad.binarytree;
 
 import java.util.List;
 

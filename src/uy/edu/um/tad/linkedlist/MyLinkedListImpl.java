@@ -1,11 +1,11 @@
-package uy.edu.um.tad.linkedlist;
+package src.uy.edu.um.tad.linkedlist;
 
 import lombok.Getter;
 import lombok.Setter;
-import uy.edu.um.tad.queue.EmptyQueueException;
-import uy.edu.um.tad.queue.MyQueue;
-import uy.edu.um.tad.stack.EmptyStackException;
-import uy.edu.um.tad.stack.MyStack;
+import src.uy.edu.um.tad.queue.EmptyQueueException;
+import src.uy.edu.um.tad.queue.MyQueue;
+import src.uy.edu.um.tad.stack.EmptyStackException;
+import src.uy.edu.um.tad.stack.MyStack;
 
 @Setter
 @Getter
