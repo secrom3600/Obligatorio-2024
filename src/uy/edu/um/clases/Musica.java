@@ -24,27 +24,27 @@ public class Musica {
     private List<String> artists;
 
     private String daily_rank;
-    private String daily_movement;
-    private String weekly_movement;
+    //private String daily_movement;
+    //private String weekly_movement;
     private String country;
     private String snapshot_date;
     private String popularity;
-    private String is_explicit;
-    private String duration_ms;
+    //private String is_explicit;
+    //private String duration_ms;
     private String album_name;
     private String album_release_date;
-    private String danceability;
-    private String energy;
-    private String key;
-    private String loudness;
-    private String mode;
-    private String speechiness;
-    private String acousticness;
-    private String instrumentalness;
-    private String liveness;
-    private String valence;
+    //private String danceability;
+    //private String energy;
+    //private String key;
+    //private String loudness;
+    //private String mode;
+    //private String speechiness;
+    //private String acousticness;
+    //private String instrumentalness;
+    //private String liveness;
+    //private String valence;
     private String tempo;
-    private String time_signature;
+    //private String time_signature;
 
 
 
