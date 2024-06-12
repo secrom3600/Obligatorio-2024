@@ -1,4 +1,4 @@
-package src.uy.edu.um;
+package src.uy.edu.um.funciones;
 
 import src.uy.edu.um.clases.Musica;
 import src.uy.edu.um.tad.linkedlist.MyLinkedListImpl;
