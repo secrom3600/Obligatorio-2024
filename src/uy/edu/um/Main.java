@@ -5,9 +5,9 @@ package src.uy.edu.um;
 public class Main {
     public static void main(String[] args) {
 
-        Funciones misFunciones = new Funciones();
+        LectorCSV misFunciones = new LectorCSV();
         misFunciones.cargarMusicas();
         //funcion creada para ver el correcto funcionamiento
-        misFunciones.listarTodasLasMusicas();
+        misFunciones.listarVariables();
     }
 }

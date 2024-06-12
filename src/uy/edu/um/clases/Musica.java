@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import src.uy.edu.um.tad.linkedlist.MyLinkedListImpl;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -23,16 +24,16 @@ public class Musica {
     // deberia de ser una lista los artistas
     private List<String> artists;
 
-    private String daily_rank;
+    private Integer daily_rank;
     //private String daily_movement;
     //private String weekly_movement;
     private String country;
-    private String snapshot_date;
-    private String popularity;
+    //private String snapshot_date;
+    private Integer popularity;
     //private String is_explicit;
     //private String duration_ms;
     private String album_name;
-    private String album_release_date;
+    private LocalDate album_release_date;
     //private String danceability;
     //private String energy;
     //private String key;
@@ -43,7 +44,7 @@ public class Musica {
     //private String instrumentalness;
     //private String liveness;
     //private String valence;
-    private String tempo;
+    private Float tempo;
     //private String time_signature;
 
 
