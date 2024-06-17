@@ -6,14 +6,11 @@ import src.uy.edu.um.tad.linkedlist.MyList;
 import src.uy.edu.um.tad.linkedlist.Node;
 import src.uy.edu.um.util.FileUtil;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class LectorCSV {
 
-    private MyList<Musica> musicas = new MyLinkedListImpl<>();
+    public MyList<Musica> musicas = new MyLinkedListImpl<>();
 
     public void cargarMusicas()
     {
@@ -39,7 +36,7 @@ public class LectorCSV {
                         //.is_explicit(data[9])
                         //.duration_ms(data[10])
                         .album_name(data[11].replace("\"", ""))
-                        .album_release_date(LocalDate.parse(data[12].replace("\"", "")))
+                        .album_release_date(data[12].replace("\"", ""))
                         //.danceability(data[13])
                         //.energy(data[14])
                         //.key(data[15])
@@ -71,10 +68,56 @@ public class LectorCSV {
 
         Node<Musica> musicaNode = this.musicas.getFirst();
         while(musicaNode!= null) {
-            System.out.println(musicaNode.getValue().getAlbum_release_date());
+
+            if(musicaNode.getValue().getAlbum_release_date().equals("2022-12-06"))
+                System.out.println(musicaNode.getValue().getAlbum_name());
             musicaNode = musicaNode.getNext();
+        }
+
+    }
 
 
+
+    public void Top5Canciones50top(String dia){
+        // Mapa para contar la cantidad de apariciones de cada canción
+        Map<String, Integer> conteoCanciones = new HashMap<>();
+        // Mapa para almacenar los nombres de las canciones
+        Map<String, String> idANombre = new HashMap<>();
+        // Min-Heap para mantener las top 5 canciones más populares
+        PriorityQueue<Map.Entry<String, Integer>> minHeap = new PriorityQueue<>(
+                (a, b) -> a.getValue().compareTo(b.getValue())
+        );
+
+        Node<Musica> musicaNode = this.musicas.getFirst();
+
+        while (musicaNode != null) {
+            if (musicaNode.getValue().getAlbum_release_date().equals(dia)) {
+                String idCancion = musicaNode.getValue().getSpotify_id();
+                String nombreCancion = musicaNode.getValue().getName();
+                conteoCanciones.put(idCancion, conteoCanciones.getOrDefault(idCancion, 0) + 1);
+                idANombre.put(idCancion, nombreCancion);
+            }
+            musicaNode = musicaNode.getNext();
+        }
+
+        // Agregar los conteos al Min-Heap y mantener solo las 5 canciones más populares
+        for (Map.Entry<String, Integer> entry : conteoCanciones.entrySet()) {
+            minHeap.offer(entry);
+            if (minHeap.size() > 5) {
+                minHeap.poll();
+            }
+        }
+
+        // Obtener las 5 canciones más populares desde el Min-Heap
+        List<String> top5CancionesIds = new ArrayList<>();
+        while (!minHeap.isEmpty()) {
+            top5CancionesIds.add(minHeap.poll().getKey());
+        }
+
+        // Imprimir los nombres de las 5 canciones más populares
+        System.out.println("Las 5 canciones más populares son:");
+        for (String id : top5CancionesIds) {
+            System.out.println(idANombre.get(id));
         }
     }
 }

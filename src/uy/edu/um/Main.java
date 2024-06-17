@@ -13,7 +13,7 @@ public class Main {
         misFunciones.cargarMusicas();
         //funcion creada para ver el correcto funcionamiento
 
-        misFunciones.listarVariables();
+        misFunciones.Top5Canciones50top("2024-04-26");
 
 
 
