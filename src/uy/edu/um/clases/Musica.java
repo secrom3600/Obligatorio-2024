@@ -33,7 +33,7 @@ public class Musica {
     //private String is_explicit;
     //private String duration_ms;
     private String album_name;
-    private LocalDate album_release_date;
+    private String album_release_date;
     //private String danceability;
     //private String energy;
     //private String key;
