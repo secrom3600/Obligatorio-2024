@@ -31,12 +31,12 @@ public class LectorCSV {
                         //.daily_movement(data[4])
                         //.weekly_movement(data[5])
                         .country(data[6].replace("\"", ""))
-                        //.snapshot_date(data[7].replace("\"", ""))
+                        .snapshot_date(data[7].replace("\"", ""))
                         .popularity(Integer.parseInt(data[8].replace("\"", "")))
                         //.is_explicit(data[9])
                         //.duration_ms(data[10])
                         .album_name(data[11].replace("\"", ""))
-                        .album_release_date(data[12].replace("\"", ""))
+                        //.album_release_date(data[12].replace("\"", ""))
                         //.danceability(data[13])
                         //.energy(data[14])
                         //.key(data[15])
@@ -69,7 +69,7 @@ public class LectorCSV {
         Node<Musica> musicaNode = this.musicas.getFirst();
         while(musicaNode!= null) {
 
-            if(musicaNode.getValue().getAlbum_release_date().equals("2022-12-06"))
+            if(musicaNode.getValue().getSnapshot_date().equals("2022-12-06"))
                 System.out.println(musicaNode.getValue().getAlbum_name());
             musicaNode = musicaNode.getNext();
         }
@@ -91,7 +91,7 @@ public class LectorCSV {
         Node<Musica> musicaNode = this.musicas.getFirst();
 
         while (musicaNode != null) {
-            if (musicaNode.getValue().getAlbum_release_date().equals(dia)) {
+            if (musicaNode.getValue().getSnapshot_date().equals(dia)) {
                 String idCancion = musicaNode.getValue().getSpotify_id();
                 String nombreCancion = musicaNode.getValue().getName();
                 conteoCanciones.put(idCancion, conteoCanciones.getOrDefault(idCancion, 0) + 1);
@@ -120,4 +120,32 @@ public class LectorCSV {
             System.out.println(idANombre.get(id));
         }
     }
+
+
+    public void CantArtistaEnTop50EnFecha(String Artista,String fecha){
+        int cantAparicion = 0;
+
+        Node<Musica> musicaNode = this.musicas.getFirst();
+
+        while (musicaNode != null) {
+            if (musicaNode.getValue().getSnapshot_date().equals(fecha)) {
+                List<String> artistas = musicaNode.getValue().getArtists();
+                for (String artist : artistas) {
+                    if (artist.equals(Artista)) {
+                        cantAparicion++;
+                    }
+
+                }
+            }
+            musicaNode = musicaNode.getNext();
+        }
+        System.out.println("El artista " + Artista + " aparece " + cantAparicion + " veces en la fecha " + fecha);
+
+
+
+
+    }
+
+
+
 }
