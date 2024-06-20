@@ -15,11 +15,9 @@ public class Main {
         LectorCSV misFunciones = new LectorCSV();
         misFunciones.cargarMusicas();
         //funcion creada para ver el correcto funcionamiento
-
         misFunciones.Top5Canciones50top("2024-05-13");
         misFunciones.CantArtistaEnTop50EnFecha("Tommy Richman   ","2024-05-13");
         misFunciones.CancionesConTempo(101.061,127.986,"2024-02-05","2024-05-05");
-
         misFunciones.Top7ArtistasEnTops50("2024-02-05","2024-05-05");
 
         Scanner scanner = new Scanner(System.in);
