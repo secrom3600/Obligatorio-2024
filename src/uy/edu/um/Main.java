@@ -1,11 +1,15 @@
 package src.uy.edu.um;
 
 import src.uy.edu.um.funciones.LectorCSV;
+
+import javax.swing.*;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    private static String LectorCSV;
+
     public static void main(String[] args) {
 
         LectorCSV misFunciones = new LectorCSV();
@@ -36,19 +40,41 @@ public class Main {
 
             switch (option) {
                 case 1:
-                    misFunciones.Top10CancionesEnUnDia(misFunciones,scanner);
+                    System.out.println("Ingrese el país: ");
+                    String pais = scanner.nextLine();
+                    System.out.println("Ingrese la fecha en formato (YYYY-MM-DD): ");
+                    String fecha = scanner.nextLine();
+                    misFunciones.Top10CancionesEnUnDia(pais, fecha);
                     break;
                 case 2:
-                    misFunciones.Top5Canciones50top(misFunciones, scanner);
+                    System.out.println("Ingrese la fecha en formato (YYYY-MM-DD): ");
+                    String dia = scanner.nextLine();
+                    misFunciones.Top5Canciones50top(dia);
                     break;
                 case 3:
-                    misFunciones.Top7ArtistasEnTops50(misFunciones, scanner);
+                    System.out.println("Ingrese la fecha de inicio en formato (YYYY-MM-DD):: ");
+                    String fechaIn = scanner.nextLine();
+                    System.out.println("Ingrese la fecha de fin en formato (YYYY-MM-DD): ");
+                    String fechaOut = scanner.nextLine();
+                    misFunciones.Top7ArtistasEnTops50(fechaIn, fechaOut);
                     break;
                 case 4:
-                    misFunciones.CantArtistaEnTop50EnFecha(misFunciones, scanner);
+                    System.out.println("Ingrese el artista: ");
+                    String artista = scanner.nextLine();
+                    System.out.println("Ingrese la fecha en formato (YYYY-MM-DD): ");
+                    String fechas = scanner.nextLine();
+                    misFunciones.CantArtistaEnTop50EnFecha(artista, fechas);
                     break;
                 case 5:
-                    misFunciones.CancionesConTempo(misFunciones, scanner);
+                    System.out.println("Ingrese el tempo de inicio: ");
+                    Double tempoIn = scanner.nextDouble();
+                    System.out.println("Ingrese el tempo de fin: ");
+                    Double tempoOut = scanner.nextDouble();
+                    System.out.println("Ingrese la fecha de inicio en formato (YYYY-MM-DD):: ");
+                    String fechaInicio = scanner.nextLine();
+                    System.out.println("Ingrese la fecha de fin en formato (YYYY-MM-DD): ");
+                    String fechaFin = scanner.nextLine();
+                    misFunciones.CancionesConTempo(tempoIn, tempoOut, fechaInicio, fechaFin);
                     break;
                 case 6:
                     exit = true;
@@ -58,49 +84,6 @@ public class Main {
                     System.out.println("Opción no válida, por favor intente de nuevo.");
             }
         }
-
         scanner.close();
-    }
-    private static void top10CancionesEnUnDia(LectorCSV misFunciones, Scanner scanner) {
-        System.out.print("Ingrese el país: ");
-        String pais = scanner.nextLine();
-        System.out.print("Ingrese la fecha (YYYY-MM-DD): ");
-        String fecha = scanner.nextLine();
-        misFunciones.Top10CancionesEnUnDia(pais, fecha);
-    }
-
-    private static void top5Canciones50top(LectorCSV misFunciones, Scanner scanner) {
-        System.out.print("Ingrese la fecha (YYYY-MM-DD): ");
-        String fecha = scanner.nextLine();
-        misFunciones.Top5Canciones50top(fecha);
-    }
-
-    private static void top7ArtistasEnTops50(LectorCSV misFunciones, Scanner scanner) {
-        System.out.print("Ingrese la fecha de inicio (YYYY-MM-DD): ");
-        String fechaInicio = scanner.nextLine();
-        System.out.print("Ingrese la fecha de fin (YYYY-MM-DD): ");
-        String fechaFin = scanner.nextLine();
-        misFunciones.Top7ArtistasEnTops50(fechaInicio, fechaFin);
-    }
-
-    private static void cantArtistaEnTop50EnFecha(LectorCSV misFunciones, Scanner scanner) {
-        System.out.print("Ingrese el nombre del artista: ");
-        String artista = scanner.nextLine();
-        System.out.print("Ingrese la fecha (YYYY-MM-DD): ");
-        String fecha = scanner.nextLine();
-        misFunciones.CantArtistaEnTop50EnFecha(artista, fecha);
-    }
-
-    private static void cancionesConTempo(LectorCSV misFunciones, Scanner scanner) {
-        System.out.print("Ingrese el tempo mínimo: ");
-        double tempoMin = scanner.nextDouble();
-        System.out.print("Ingrese el tempo máximo: ");
-        double tempoMax = scanner.nextDouble();
-        scanner.nextLine(); // Consumir el salto de línea
-        System.out.print("Ingrese la fecha de inicio (YYYY-MM-DD): ");
-        String fechaInicio = scanner.nextLine();
-        System.out.print("Ingrese la fecha de fin (YYYY-MM-DD): ");
-        String fechaFin = scanner.nextLine();
-        misFunciones.CancionesConTempo(tempoMin, tempoMax, fechaInicio, fechaFin);
     }
 }
