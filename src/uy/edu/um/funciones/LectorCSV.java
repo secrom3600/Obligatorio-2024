@@ -203,7 +203,7 @@ public class LectorCSV {
 
     }
 
-    public void Top10CancionesEnUnDia (String fecha){
+    public void Top10CancionesEnUnDia (String pais,String fecha){
 
     }
 
