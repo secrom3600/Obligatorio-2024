@@ -10,7 +10,7 @@ import java.util.*;
 
 public class LectorCSV {
 
-    public MyList<Musica> musicas = new MyLinkedListImpl<>();
+    private MyList<Musica> musicas = new MyLinkedListImpl<>();
 
     public void cargarMusicas()
     {
@@ -47,7 +47,7 @@ public class LectorCSV {
                         //.instrumentalness(data[20])
                         //.liveness(data[21])
                         //.valence(data[22])
-                        .tempo(Float.parseFloat(data[23].replace("\"", "")))
+                        .tempo(Double.parseDouble(data[23].replace("\"", "")))
                         //.time_signature(data[24])
                         .build();
 
@@ -143,6 +143,67 @@ public class LectorCSV {
 
 
 
+
+    }
+
+    public void CancionesConTempo (Double tempoIn, Double tempoOut,String fechaIn, String fechaOut){
+        MyList<Musica> musicaCorrecta = new MyLinkedListImpl<>();
+        int count = 0;
+        Node<Musica> musicaNode = this.musicas.getFirst();
+        while (musicaNode != null) {
+            if (musicaNode.getValue().getSnapshot_date().compareTo(fechaIn) > 0 ||
+                musicaNode.getValue().getSnapshot_date().compareTo(fechaOut) < 0 ||
+                musicaNode.getValue().getTempo() > tempoIn ||
+                musicaNode.getValue().getTempo() < tempoOut
+                ){
+                    count += 1;
+                }
+            musicaNode = musicaNode.getNext();
+        }
+        System.out.println("la cantidad de canciones entre el rango de tempo dado y la fecha dado es: " + count);
+    }
+
+    public void Top7ArtistasEnTops50 (String fechaIn,String fechaOut){
+
+        List<String> todosLosArtistas = new ArrayList<>();
+
+        Node<Musica> musicaNode = this.musicas.getFirst();
+        while (musicaNode != null) {
+            if (musicaNode.getValue().getSnapshot_date().compareTo(fechaIn) > 0 ||
+                    musicaNode.getValue().getSnapshot_date().compareTo(fechaOut) < 0) {
+                List<String> artistas = musicaNode.getValue().getArtists();
+                todosLosArtistas.addAll(artistas);
+            }
+            musicaNode = musicaNode.getNext();
+        }
+
+        Map<String, Integer> contadorDeArtistas = new HashMap<>();
+        for (String artista : todosLosArtistas) {
+            contadorDeArtistas.put(artista, contadorDeArtistas.getOrDefault(artista, 0) + 1);
+        }
+
+        PriorityQueue<Map.Entry<String, Integer>> priorityQueue = new PriorityQueue<>(
+                7, Comparator.comparingInt(Map.Entry::getValue)
+        );
+
+        for (Map.Entry<String, Integer> entry : contadorDeArtistas.entrySet()) {
+            priorityQueue.offer(entry);
+            if (priorityQueue.size() > 7) {
+                priorityQueue.poll();
+            }
+        }
+
+        List<Map.Entry<String, Integer>> topArtistas = new ArrayList<>(priorityQueue);
+        topArtistas.sort((e1, e2) -> Integer.compare(e2.getValue(), e1.getValue()));
+
+        System.out.println("Los 7 artistas más frecuentes son:");
+        for (Map.Entry<String, Integer> entry : topArtistas) {
+            System.out.println(entry.getKey() + ": " + entry.getValue() + " veces");
+        }
+
+    }
+
+    public void Top10CancionesEnUnDia (String fecha){
 
     }
 
