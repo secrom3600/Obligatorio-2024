@@ -8,7 +8,7 @@ import src.uy.edu.um.util.FileUtil;
 
 import java.util.*;
 
-public class LectorCSV {
+public class Funciones {
 
     private MyList<Musica> musicas = new MyLinkedListImpl<>();
 
@@ -62,7 +62,7 @@ public class LectorCSV {
             }
         }
     }
-
+    //funcion de prueba
     public void listarVariables()
     {
 
@@ -108,19 +108,18 @@ public class LectorCSV {
             }
         }
 
-        // Obtener las 5 canciones más populares desde el Min-Heap
-        List<String> top5CancionesIds = new ArrayList<>();
+        Stack<Map.Entry<String, Integer>> stack = new Stack<>();
         while (!minHeap.isEmpty()) {
-            top5CancionesIds.add(minHeap.poll().getKey());
+            stack.push(minHeap.poll());
         }
 
-        // Imprimir los nombres de las 5 canciones más populares
+        // Imprimir los nombres de las 5 canciones más populares en orden descendente
         System.out.println("Las 5 canciones más populares son:");
-        for (String id : top5CancionesIds) {
+        while (!stack.isEmpty()) {
+            String id = stack.pop().getKey();
             System.out.println(idANombre.get(id));
         }
     }
-
 
     public void CantArtistaEnTop50EnFecha(String Artista,String fecha){
         int cantAparicion = 0;
@@ -205,10 +204,6 @@ public class LectorCSV {
 
     public void Top10CancionesEnUnDia (String pais,String fecha){
 
-    }
-
-    {
-
         // Mapa para contar la cantidad de apariciones de cada canción
         Map<String, Integer> conteoCanciones = new HashMap<>();
 
@@ -252,11 +247,11 @@ public class LectorCSV {
             musicaNode = musicaList.getFirst();
             String id = stack.pop().getKey();
             while (musicaNode != null) {
-                if (musicaNode.getValue().getSpotify_id().equals(id)) {
-                    System.out.println("Nombre: " + musicaNode.getValue().getName()
-                            + " artistas: " + musicaNode.getValue().getArtists()
-                            + " con la posicion: " + musicaNode.getValue().getDaily_rank() );
-                }
+                 if (musicaNode.getValue().getSpotify_id().equals(id)) {
+                     System.out.println("Nombre: " + musicaNode.getValue().getName()
+                             + " artistas: " + musicaNode.getValue().getArtists()
+                             + " con la posicion: " + musicaNode.getValue().getDaily_rank() );
+                 }
                 musicaNode = musicaNode.getNext();
             }
         }
@@ -264,61 +259,6 @@ public class LectorCSV {
 
 
     }
-
-    public void Top10CancionesEnUnDia (String pais,String fecha){
-
-        // Mapa para contar la cantidad de apariciones de cada canción
-        Map<String, Integer> conteoCanciones = new HashMap<>();
-
-        MyList<Musica> musicaList = new MyLinkedListImpl<>();
-
-        PriorityQueue<Map.Entry<String, Integer>> minHeap = new PriorityQueue<>(
-                (a, b) -> a.getValue().compareTo(b.getValue())
-        );
-
-
-        Node<Musica> musicaNode = this.musicas.getFirst();
-        while (musicaNode != null) {
-            if (musicaNode.getValue().getSnapshot_date().equals(fecha) &&
-                    musicaNode.getValue().getCountry().equals(pais)) {
-                String idCancion = musicaNode.getValue().getSpotify_id();
-                conteoCanciones.put(idCancion, conteoCanciones.getOrDefault(idCancion, 0) + 1);
-                musicaList.add(musicaNode.getValue());
-            }
-            musicaNode = musicaNode.getNext();
-        }
-
-
-        for (Map.Entry<String, Integer> entry : conteoCanciones.entrySet()) {
-            minHeap.offer(entry);
-            if (minHeap.size() > 10) {
-                minHeap.poll();
-            }
-        }
-
-        // Obtener las 10 canciones más populares desde el Min-Heap
-        Stack<Map.Entry<String, Integer>> stack = new Stack<>();
-        while (!minHeap.isEmpty()) {
-            stack.push(minHeap.poll());
-        }
-        // Imprimir los nombres de las 10 canciones más populares
-        System.out.println("Las 10 canciones más populares son:");
-
-
-
-        while (!stack.isEmpty()) {
-            musicaNode = musicaList.getFirst();
-            String id = stack.pop().getKey();
-            while (musicaNode != null) {
-                if (musicaNode.getValue().getSpotify_id().equals(id)) {
-                    System.out.println("Nombre: " + musicaNode.getValue().getName()
-                            + " artistas: " + musicaNode.getValue().getArtists()
-                            + " con la posicion: " + musicaNode.getValue().getDaily_rank() );
-                }
-                musicaNode = musicaNode.getNext();
-            }
-        }
-
 
 
 
