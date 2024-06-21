@@ -1,8 +1,7 @@
 package src.uy.edu.um;
 
-import src.uy.edu.um.funciones.LectorCSV;
+import src.uy.edu.um.funciones.Funciones;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -12,13 +11,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LectorCSV misFunciones = new LectorCSV();
+        Funciones misFunciones = new Funciones();
         misFunciones.cargarMusicas();
         //funcion creada para ver el correcto funcionamiento
-        misFunciones.Top5Canciones50top("2024-05-13");
-        misFunciones.CantArtistaEnTop50EnFecha("Tommy Richman   ","2024-05-13");
-        misFunciones.CancionesConTempo(101.061,127.986,"2024-02-05","2024-05-05");
-        misFunciones.Top7ArtistasEnTops50("2024-02-05","2024-05-05");
+        //misFunciones.Top5Canciones50top("2024-05-13");
+        //misFunciones.CantArtistaEnTop50EnFecha("Tommy Richman   ","2024-05-13");
+        //misFunciones.CancionesConTempo(101.061,127.986,"2024-02-05","2024-05-05");
+        //misFunciones.Top7ArtistasEnTops50("2024-02-05","2024-05-05");
 
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
@@ -64,11 +63,13 @@ public class Main {
                     misFunciones.CantArtistaEnTop50EnFecha(artista, fechas);
                     break;
                 case 5:
-                    System.out.println("Ingrese el tempo de inicio: ");
+                    System.out.println("Ingrese el tempo inicial: ");
                     Double tempoIn = scanner.nextDouble();
-                    System.out.println("Ingrese el tempo de fin: ");
+                    scanner.nextLine();
+                    System.out.println("Ingrese el tempo final: ");
                     Double tempoOut = scanner.nextDouble();
-                    System.out.println("Ingrese la fecha de inicio en formato (YYYY-MM-DD):: ");
+                    scanner.nextLine();
+                    System.out.println("Ingrese la fecha de inicio en formato (YYYY-MM-DD): ");
                     String fechaInicio = scanner.nextLine();
                     System.out.println("Ingrese la fecha de fin en formato (YYYY-MM-DD): ");
                     String fechaFin = scanner.nextLine();
