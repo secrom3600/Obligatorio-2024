@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9728b0f6-58f8-439b-ba37-db4197100f9b" name="Changes" comment="Funcion artista apariciones en un dia dado">
-      <change beforePath="$PROJECT_DIR$/src/uy/edu/um/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/uy/edu/um/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="dbbdf230-0614-473b-b86a-3735c413f828" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,101 +13,50 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Nico-Cygan&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/secrom3600/Obligatorio-2024.git&quot;,
-    &quot;accountId&quot;: &quot;cc965cd5-264c-4f8a-b8f8-9e53cc4bec63&quot;
-  }
-}</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2h7F74kSyYNba2lOWEsXPd2c5JS" />
+  <component name="ProjectId" id="2h4h2DVQdxl7bnCnkTes3XmFXiL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nicoc/OneDrive/Documentos/Programacion II/Obligatorio-2024&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\nicoc\OneDrive\Documentos\Programacion II\Obligatorio-2024\src\uy\edu\um" />
-      <recent name="C:\Users\nicoc\OneDrive\Documentos\Programacion II\Obligatorio-2024\src\uy\edu\um\clases" />
-      <recent name="C:\Users\nicoc\OneDrive\Documentos\Programacion II\Obligatorio-2024\src\uy\edu\um\funciones" />
-      <recent name="C:\Users\nicoc\OneDrive\Documentos\Programacion II\Obligatorio-2024" />
-    </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
-      </set>
-    </attachedChunks>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.uy.edu.um.Main" />
+      <module name="Obligatiorio-Prog-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.uy.edu.um.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9728b0f6-58f8-439b-ba37-db4197100f9b" name="Changes" comment="" />
-      <created>1716937037404</created>
+      <changelist id="dbbdf230-0614-473b-b86a-3735c413f828" name="Changes" comment="" />
+      <created>1716859053475</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1716937037404</updated>
-      <workItem from="1716937038506" duration="113000" />
-      <workItem from="1718668157339" duration="266000" />
-      <workItem from="1718668446417" duration="713000" />
-      <workItem from="1718758609853" duration="1335000" />
-      <workItem from="1718907574507" duration="2446000" />
+      <updated>1716859053475</updated>
     </task>
-    <task id="LOCAL-00001" summary="Creada funcion top 5 canciones en tops 50">
-      <option name="closed" value="true" />
-      <created>1718668735218</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1718668735218</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Funcion artista apariciones en un dia dado">
-      <option name="closed" value="true" />
-      <created>1718759627853</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1718759627853</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creada funcion top 5 canciones en tops 50" />
-    <MESSAGE value="Funcion artista apariciones en un dia dado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funcion artista apariciones en un dia dado" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
