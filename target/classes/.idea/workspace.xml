@@ -4,37 +4,82 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbbdf230-0614-473b-b86a-3735c413f828" name="Changes" comment="" />
+    <list default="true" id="94410d08-5c33-4220-bc3e-53d50e6c5ff2" name="Changes" comment="arreglo de menu" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;secrom3600&quot;
+  }
 }</component>
-  <component name="ProjectId" id="2h4h2DVQdxl7bnCnkTes3XmFXiL" />
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/secrom3600/Obligatorio-2024.git&quot;,
+    &quot;accountId&quot;: &quot;c4cc2da9-d284-494a-b66f-051246be6063&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2hhAmFLzbiPTYPlZbKqpjKdMIiS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Secrom/Desktop/universidad/semestre 3/Programacion/Obligatorio-2024",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Secrom\Desktop\universidad\semestre 3\Programacion\Obligatorio-2024\src\uy\edu\um" />
+      <recent name="C:\Users\Secrom\Desktop\universidad\semestre 3\Programacion\Obligatorio-2024\src\uy\edu\um\TADs\binarytree" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Secrom\Desktop\universidad\semestre 3\Programacion\Obligatorio-2024" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="src.uy.edu.um.util" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.uy.edu.um.Main" />
       <module name="Obligatiorio-Prog-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.uy.edu.um.*" />
+          <option name="PATTERN" value="src.uy.edu.um.funciones.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -48,15 +93,186 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dbbdf230-0614-473b-b86a-3735c413f828" name="Changes" comment="" />
-      <created>1716859053475</created>
+      <changelist id="94410d08-5c33-4220-bc3e-53d50e6c5ff2" name="Changes" comment="" />
+      <created>1718036094104</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1716859053475</updated>
+      <updated>1718036094104</updated>
+      <workItem from="1718036095492" duration="6625000" />
+      <workItem from="1718066730720" duration="1435000" />
+      <workItem from="1718123049557" duration="698000" />
+      <workItem from="1718208732898" duration="4626000" />
+      <workItem from="1718578770910" duration="2894000" />
+      <workItem from="1718593373452" duration="1448000" />
+      <workItem from="1718640151520" duration="5998000" />
+      <workItem from="1718668043779" duration="2163000" />
+      <workItem from="1718735389096" duration="1622000" />
+      <workItem from="1718737034522" duration="237000" />
+      <workItem from="1718745135820" duration="1082000" />
+      <workItem from="1718747223641" duration="103000" />
+      <workItem from="1718903310440" duration="3127000" />
+      <workItem from="1718908599078" duration="187000" />
+      <workItem from="1718911095451" duration="907000" />
+      <workItem from="1718926319536" duration="710000" />
+      <workItem from="1718976046679" duration="3266000" />
+      <workItem from="1719014825952" duration="327000" />
+      <workItem from="1719015918445" duration="706000" />
+      <workItem from="1719019996880" duration="279000" />
+      <workItem from="1719055679112" duration="979000" />
+      <workItem from="1719062656023" duration="1842000" />
+      <workItem from="1719094890770" duration="305000" />
     </task>
+    <task id="LOCAL-00001" summary="Added hash">
+      <option name="closed" value="true" />
+      <created>1718036530348</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718036530348</updated>
+    </task>
+    <task id="LOCAL-00002" summary="correccion de errores en los imports">
+      <option name="closed" value="true" />
+      <created>1718037305784</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718037305784</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Lector y Split del CSV implementado">
+      <option name="closed" value="true" />
+      <created>1718041257050</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718041257050</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Lector y Split del CSV implementado">
+      <option name="closed" value="true" />
+      <created>1718042631227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718042631227</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Lector y Split del CSV implementado">
+      <option name="closed" value="true" />
+      <created>1718042698088</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718042698088</updated>
+    </task>
+    <task id="LOCAL-00006" summary="añado fileUtil, no añadido anteriormente">
+      <option name="closed" value="true" />
+      <created>1718067012460</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718067012460</updated>
+    </task>
+    <task id="LOCAL-00007" summary="data inecesaria de la clase eliminiada, eliminacion de comillas inecesarias de los atributos">
+      <option name="closed" value="true" />
+      <created>1718123721997</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718123721997</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Actualizacion de los atributos de la clase Musica para que sean el dato correcto">
+      <option name="closed" value="true" />
+      <created>1718212982124</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718212982124</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Creacion de la carpeta &quot;funciones&quot; y creacion de las clases para las distintas funciones">
+      <option name="closed" value="true" />
+      <created>1718213198258</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718213198258</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Arreglos en la clase musicas">
+      <option name="closed" value="true" />
+      <created>1718646009690</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718646009690</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Arreglos en la clase musicas">
+      <option name="closed" value="true" />
+      <created>1718905909626</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718905909626</updated>
+    </task>
+    <task id="LOCAL-00012" summary="correccion de funcion">
+      <option name="closed" value="true" />
+      <created>1718912003596</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1718912003596</updated>
+    </task>
+    <task id="LOCAL-00013" summary="correccion de funcion">
+      <option name="closed" value="true" />
+      <created>1718926427183</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1718926427183</updated>
+    </task>
+    <task id="LOCAL-00014" summary="arreglo de menu">
+      <option name="closed" value="true" />
+      <created>1718979095353</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718979095353</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added hash" />
+    <MESSAGE value="correccion de errores en los imports" />
+    <MESSAGE value="Lector y Split del CSV implementado" />
+    <MESSAGE value="añado fileUtil, no añadido anteriormente" />
+    <MESSAGE value="data inecesaria de la clase eliminiada, eliminacion de comillas inecesarias de los atributos" />
+    <MESSAGE value="Actualizacion de los atributos de la clase Musica para que sean el dato correcto" />
+    <MESSAGE value="Creacion de la carpeta &quot;funciones&quot; y creacion de las clases para las distintas funciones" />
+    <MESSAGE value="Arreglos en la clase musicas" />
+    <MESSAGE value="correccion de funcion" />
+    <MESSAGE value="arreglo de menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglo de menu" />
   </component>
 </project>

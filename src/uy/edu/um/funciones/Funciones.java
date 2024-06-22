@@ -14,6 +14,8 @@ public class Funciones {
 
     public void cargarMusicas()
     {
+
+
         String[] linesMusicas = FileUtil.readFile("universal_top_spotify_songs.csv");
         for (String line : linesMusicas)
         {
@@ -60,6 +62,7 @@ public class Funciones {
                 continue;
             }
         }
+
     }
 
     //funcion de prueba
@@ -79,6 +82,7 @@ public class Funciones {
 
 
     public void Top5Canciones50top(String dia){
+        long startTime = System.currentTimeMillis();
         // Mapa para contar la cantidad de apariciones de cada canción
         Map<String, Integer> conteoCanciones = new HashMap<>();
         // Mapa para almacenar los nombres de las canciones
@@ -119,9 +123,14 @@ public class Funciones {
             String id = stack.pop().getKey();
             System.out.println(idANombre.get(id));
         }
+
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+        System.out.println(elapsedTime);
     }
 
     public void CantArtistaEnTop50EnFecha(String Artista,String fecha){
+        long startTime = System.currentTimeMillis();
         int cantAparicion = 0;
 
         Node<Musica> musicaNode = this.musicas.getFirst();
@@ -141,18 +150,22 @@ public class Funciones {
         System.out.println("El artista " + Artista + " aparece " + cantAparicion + " veces en la fecha " + fecha);
 
 
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+        System.out.println(elapsedTime);
 
 
     }
 
     public void CancionesConTempo (Double tempoIn, Double tempoOut,String fechaIn, String fechaOut){
-        MyList<Musica> musicaCorrecta = new MyLinkedListImpl<>();
+        long startTime = System.currentTimeMillis();
+
         int count = 0;
         Node<Musica> musicaNode = this.musicas.getFirst();
         while (musicaNode != null) {
-            if (musicaNode.getValue().getSnapshot_date().compareTo(fechaIn) > 0 ||
-                musicaNode.getValue().getSnapshot_date().compareTo(fechaOut) < 0 ||
-                musicaNode.getValue().getTempo() > tempoIn ||
+            if (musicaNode.getValue().getSnapshot_date().compareTo(fechaIn) > 0 &&
+                musicaNode.getValue().getSnapshot_date().compareTo(fechaOut) < 0 &&
+                musicaNode.getValue().getTempo() > tempoIn &&
                 musicaNode.getValue().getTempo() < tempoOut
                 ){
                     count += 1;
@@ -160,15 +173,21 @@ public class Funciones {
             musicaNode = musicaNode.getNext();
         }
         System.out.println("la cantidad de canciones entre el rango de tempo dado y la fecha dado es: " + count);
+
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+        System.out.println(elapsedTime);
     }
 
     public void Top7ArtistasEnTops50 (String fechaIn,String fechaOut){
+        long startTime = System.currentTimeMillis();
 
         List<String> todosLosArtistas = new ArrayList<>();
 
         Node<Musica> musicaNode = this.musicas.getFirst();
+
         while (musicaNode != null) {
-            if (musicaNode.getValue().getSnapshot_date().compareTo(fechaIn) > 0 ||
+            if (musicaNode.getValue().getSnapshot_date().compareTo(fechaIn) > 0 &&
                     musicaNode.getValue().getSnapshot_date().compareTo(fechaOut) < 0) {
                 List<String> artistas = musicaNode.getValue().getArtists();
                 todosLosArtistas.addAll(artistas);
@@ -200,10 +219,13 @@ public class Funciones {
             System.out.println(entry.getKey() + ": " + entry.getValue() + " veces");
         }
 
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+        System.out.println(elapsedTime);
     }
 
     public void Top10CancionesEnUnDia (String pais,String fecha){
-
+        long startTime = System.currentTimeMillis();
         // Mapa para contar la cantidad de apariciones de cada canción
         Map<String, Integer> conteoCanciones = new HashMap<>();
 
@@ -256,7 +278,9 @@ public class Funciones {
             }
         }
 
-
+        long endTime = System.currentTimeMillis();
+        long elapsedTime = endTime - startTime;
+        System.out.println(elapsedTime);
 
     }
 

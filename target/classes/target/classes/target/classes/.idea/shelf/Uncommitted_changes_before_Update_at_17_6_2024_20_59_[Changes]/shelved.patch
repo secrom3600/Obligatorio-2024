@@ -1,0 +1,138 @@
+Index: src/uy/edu/um/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package src.uy.edu.um;\r\n\r\nimport src.uy.edu.um.funciones.LectorCSV;\r\n\r\nimport java.time.LocalDate;\r\n\r\n//TIP To <b>Run</b> code, press <shortcut actionId=\"Run\"/> or\r\n// click the <icon src=\"AllIcons.Actions.Execute\"/> icon in the gutter.\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n\r\n        LectorCSV misFunciones = new LectorCSV();\r\n        misFunciones.cargarMusicas();\r\n        //funcion creada para ver el correcto funcionamiento\r\n\r\n        misFunciones.listarVariables();\r\n\r\n\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/uy/edu/um/Main.java b/src/uy/edu/um/Main.java
+--- a/src/uy/edu/um/Main.java	(revision fc4e2331d000ac4dec32401dac4562680b8aed51)
++++ b/src/uy/edu/um/Main.java	(date 1718646167845)
+@@ -13,7 +13,7 @@
+         misFunciones.cargarMusicas();
+         //funcion creada para ver el correcto funcionamiento
+ 
+-        misFunciones.listarVariables();
++        misFunciones.Top5Canciones50top("2024-04-26");
+ 
+ 
+ 
+Index: src/uy/edu/um/funciones/Top5Canciones50.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package src.uy.edu.um.funciones;\r\n\r\npublic class Top5Canciones50 {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/uy/edu/um/funciones/Top5Canciones50.java b/src/uy/edu/um/funciones/Top5Canciones50.java
+--- a/src/uy/edu/um/funciones/Top5Canciones50.java	(revision fc4e2331d000ac4dec32401dac4562680b8aed51)
++++ b/src/uy/edu/um/funciones/Top5Canciones50.java	(date 1718646009045)
+@@ -1,4 +1,14 @@
+ package src.uy.edu.um.funciones;
+ 
++import src.uy.edu.um.clases.Musica;
++import src.uy.edu.um.tad.linkedlist.MyLinkedListImpl;
++import src.uy.edu.um.tad.linkedlist.MyList;
++
++import java.time.LocalDate;
++import java.util.List;
++
+ public class Top5Canciones50 {
++
++
++
+ }
+Index: src/uy/edu/um/funciones/LectorCSV.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package src.uy.edu.um.funciones;\r\n\r\nimport src.uy.edu.um.clases.Musica;\r\nimport src.uy.edu.um.tad.linkedlist.MyLinkedListImpl;\r\nimport src.uy.edu.um.tad.linkedlist.MyList;\r\nimport src.uy.edu.um.tad.linkedlist.Node;\r\nimport src.uy.edu.um.util.FileUtil;\r\n\r\nimport java.time.LocalDate;\r\nimport java.util.ArrayList;\r\nimport java.util.Arrays;\r\nimport java.util.List;\r\n\r\npublic class LectorCSV {\r\n\r\n    private MyList<Musica> musicas = new MyLinkedListImpl<>();\r\n\r\n    public void cargarMusicas()\r\n    {\r\n        String[] linesMusicas = FileUtil.readFile(\"universal_top_spotify_songs.csv\");\r\n        for (String line : linesMusicas)\r\n        {\r\n\r\n            try\r\n            {\r\n                String[] data = line.split(\",\\\"\");\r\n                String data2 = data[2].replace(\"\\\"\", \"\");\r\n                List<String> artistsList = new ArrayList<>(Arrays.asList(data2.split(\",\")));\r\n                Musica unConductor = Musica.builder()\r\n                        .spotify_id(data[0].replace(\"\\\"\", \"\"))\r\n                        .name(data[1].replace(\"\\\"\", \"\"))\r\n                        .artists(artistsList)\r\n                        .daily_rank(Integer.parseInt(data[3].replace(\"\\\"\", \"\")))\r\n                        //.daily_movement(data[4])\r\n                        //.weekly_movement(data[5])\r\n                        .country(data[6].replace(\"\\\"\", \"\"))\r\n                        //.snapshot_date(data[7].replace(\"\\\"\", \"\"))\r\n                        .popularity(Integer.parseInt(data[8].replace(\"\\\"\", \"\")))\r\n                        //.is_explicit(data[9])\r\n                        //.duration_ms(data[10])\r\n                        .album_name(data[11].replace(\"\\\"\", \"\"))\r\n                        .album_release_date(LocalDate.parse(data[12].replace(\"\\\"\", \"\")))\r\n                        //.danceability(data[13])\r\n                        //.energy(data[14])\r\n                        //.key(data[15])\r\n                        //.loudness(data[16])\r\n                        //.mode(data[17])\r\n                        //.speechiness(data[18])\r\n                        //.acousticness(data[19])\r\n                        //.instrumentalness(data[20])\r\n                        //.liveness(data[21])\r\n                        //.valence(data[22])\r\n                        .tempo(Float.parseFloat(data[23].replace(\"\\\"\", \"\")))\r\n                        //.time_signature(data[24])\r\n                        .build();\r\n\r\n                musicas.add(unConductor);\r\n\r\n\r\n\r\n            }\r\n            catch (Exception e)\r\n            {\r\n\r\n            }\r\n        }\r\n    }\r\n\r\n    public void listarVariables()\r\n    {\r\n\r\n        Node<Musica> musicaNode = this.musicas.getFirst();\r\n        while(musicaNode!= null) {\r\n            System.out.println(musicaNode.getValue().getAlbum_release_date());\r\n            musicaNode = musicaNode.getNext();\r\n\r\n\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/uy/edu/um/funciones/LectorCSV.java b/src/uy/edu/um/funciones/LectorCSV.java
+--- a/src/uy/edu/um/funciones/LectorCSV.java	(revision fc4e2331d000ac4dec32401dac4562680b8aed51)
++++ b/src/uy/edu/um/funciones/LectorCSV.java	(date 1718646009036)
+@@ -6,14 +6,11 @@
+ import src.uy.edu.um.tad.linkedlist.Node;
+ import src.uy.edu.um.util.FileUtil;
+ 
+-import java.time.LocalDate;
+-import java.util.ArrayList;
+-import java.util.Arrays;
+-import java.util.List;
++import java.util.*;
+ 
+ public class LectorCSV {
+ 
+-    private MyList<Musica> musicas = new MyLinkedListImpl<>();
++    public MyList<Musica> musicas = new MyLinkedListImpl<>();
+ 
+     public void cargarMusicas()
+     {
+@@ -39,7 +36,7 @@
+                         //.is_explicit(data[9])
+                         //.duration_ms(data[10])
+                         .album_name(data[11].replace("\"", ""))
+-                        .album_release_date(LocalDate.parse(data[12].replace("\"", "")))
++                        .album_release_date(data[12].replace("\"", ""))
+                         //.danceability(data[13])
+                         //.energy(data[14])
+                         //.key(data[15])
+@@ -71,10 +68,56 @@
+ 
+         Node<Musica> musicaNode = this.musicas.getFirst();
+         while(musicaNode!= null) {
+-            System.out.println(musicaNode.getValue().getAlbum_release_date());
++
++            if(musicaNode.getValue().getAlbum_release_date().equals("2022-12-06"))
++                System.out.println(musicaNode.getValue().getAlbum_name());
+             musicaNode = musicaNode.getNext();
++        }
++
++    }
++
++
+ 
++    public void Top5Canciones50top(String dia){
++        // Mapa para contar la cantidad de apariciones de cada canción
++        Map<String, Integer> conteoCanciones = new HashMap<>();
++        // Mapa para almacenar los nombres de las canciones
++        Map<String, String> idANombre = new HashMap<>();
++        // Min-Heap para mantener las top 5 canciones más populares
++        PriorityQueue<Map.Entry<String, Integer>> minHeap = new PriorityQueue<>(
++                (a, b) -> a.getValue().compareTo(b.getValue())
++        );
+ 
++        Node<Musica> musicaNode = this.musicas.getFirst();
++
++        while (musicaNode != null) {
++            if (musicaNode.getValue().getAlbum_release_date().equals(dia)) {
++                String idCancion = musicaNode.getValue().getSpotify_id();
++                String nombreCancion = musicaNode.getValue().getName();
++                conteoCanciones.put(idCancion, conteoCanciones.getOrDefault(idCancion, 0) + 1);
++                idANombre.put(idCancion, nombreCancion);
++            }
++            musicaNode = musicaNode.getNext();
++        }
++
++        // Agregar los conteos al Min-Heap y mantener solo las 5 canciones más populares
++        for (Map.Entry<String, Integer> entry : conteoCanciones.entrySet()) {
++            minHeap.offer(entry);
++            if (minHeap.size() > 5) {
++                minHeap.poll();
++            }
++        }
++
++        // Obtener las 5 canciones más populares desde el Min-Heap
++        List<String> top5CancionesIds = new ArrayList<>();
++        while (!minHeap.isEmpty()) {
++            top5CancionesIds.add(minHeap.poll().getKey());
++        }
++
++        // Imprimir los nombres de las 5 canciones más populares
++        System.out.println("Las 5 canciones más populares son:");
++        for (String id : top5CancionesIds) {
++            System.out.println(idANombre.get(id));
+         }
+     }
+ }

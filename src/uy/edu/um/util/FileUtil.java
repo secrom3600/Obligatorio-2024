@@ -26,21 +26,5 @@ public class FileUtil
         return lines.toArray(new String[0]);
     }
 
-    public static void writeFile(String path, String[] lines)
-    {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(path)))
-        {
-            for (String line : lines)
-            {
-                writer.write(line);
-                writer.newLine();
-            }
-            writer.flush();
-            writer.close();
-        }
-        catch (IOException e)
-        {
-            System.err.println("Error al escribir en el archivo: " + e.getMessage());
-        }
-    }
+
 }
