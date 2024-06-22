@@ -54,14 +54,14 @@ public class Funciones {
                 musicas.add(unConductor);
 
 
-
             }
             catch (Exception e)
             {
-
+                continue;
             }
         }
     }
+
     //funcion de prueba
     public void listarVariables()
     {
