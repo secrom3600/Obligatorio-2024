@@ -40,7 +40,7 @@ public class Musica {
     //private String instrumentalness;
     //private String liveness;
     //private String valence;
-    private Double tempo;
+    private Integer tempo;
     //private String time_signature;
 
 

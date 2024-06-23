@@ -63,16 +63,19 @@ public class Main {
                     misFunciones.CantArtistaEnTop50EnFecha(artista, fechas);
                     break;
                 case 5:
-                    System.out.println("Ingrese el tempo inicial: ");
-                    Double tempoIn = scanner.nextDouble();
-                    scanner.nextLine();
-                    System.out.println("Ingrese el tempo final: ");
-                    Double tempoOut = scanner.nextDouble();
-                    scanner.nextLine();
+
+
                     System.out.println("Ingrese la fecha de inicio en formato (YYYY-MM-DD): ");
                     String fechaInicio = scanner.nextLine();
                     System.out.println("Ingrese la fecha de fin en formato (YYYY-MM-DD): ");
                     String fechaFin = scanner.nextLine();
+
+                    System.out.println("Ingrese el tempo inicial: ");
+                    Integer tempoIn = scanner.nextInt();
+
+                    System.out.println("Ingrese el tempo final: ");
+                    Integer tempoOut = scanner.nextInt();
+
                     misFunciones.CancionesConTempo(tempoIn, tempoOut, fechaInicio, fechaFin);
                     break;
                 case 6:

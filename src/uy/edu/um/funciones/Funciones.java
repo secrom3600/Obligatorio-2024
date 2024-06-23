@@ -49,7 +49,7 @@ public class Funciones {
                         //.instrumentalness(data[20])
                         //.liveness(data[21])
                         //.valence(data[22])
-                        .tempo(Double.parseDouble(data[23].replace("\"", "")))
+                        .tempo(Integer.parseInt(data[23].replace("\"", "")))
                         //.time_signature(data[24])
                         .build();
 
@@ -82,7 +82,7 @@ public class Funciones {
 
 
     public void Top5Canciones50top(String dia){
-        long startTime = System.currentTimeMillis();
+
         // Mapa para contar la cantidad de apariciones de cada canción
         Map<String, Integer> conteoCanciones = new HashMap<>();
         // Mapa para almacenar los nombres de las canciones
@@ -104,7 +104,7 @@ public class Funciones {
             musicaNode = musicaNode.getNext();
         }
 
-        // Agregar los conteos al Min-Heap y mantener solo las 5 canciones más populares
+
         for (Map.Entry<String, Integer> entry : conteoCanciones.entrySet()) {
             minHeap.offer(entry);
             if (minHeap.size() > 5) {
@@ -117,20 +117,18 @@ public class Funciones {
             stack.push(minHeap.poll());
         }
 
-        // Imprimir los nombres de las 5 canciones más populares en orden descendente
+
         System.out.println("Las 5 canciones más populares son:");
         while (!stack.isEmpty()) {
             String id = stack.pop().getKey();
             System.out.println(idANombre.get(id));
         }
 
-        long endTime = System.currentTimeMillis();
-        long elapsedTime = endTime - startTime;
-        System.out.println(elapsedTime);
+
     }
 
     public void CantArtistaEnTop50EnFecha(String Artista,String fecha){
-        long startTime = System.currentTimeMillis();
+
         int cantAparicion = 0;
 
         Node<Musica> musicaNode = this.musicas.getFirst();
@@ -150,23 +148,22 @@ public class Funciones {
         System.out.println("El artista " + Artista + " aparece " + cantAparicion + " veces en la fecha " + fecha);
 
 
-        long endTime = System.currentTimeMillis();
-        long elapsedTime = endTime - startTime;
-        System.out.println(elapsedTime);
+
 
 
     }
 
-    public void CancionesConTempo (Double tempoIn, Double tempoOut,String fechaIn, String fechaOut){
-        long startTime = System.currentTimeMillis();
+    public void CancionesConTempo (Integer tempoIn, Integer tempoOut,String fechaIn, String fechaOut){
+
+
 
         int count = 0;
         Node<Musica> musicaNode = this.musicas.getFirst();
         while (musicaNode != null) {
             if (musicaNode.getValue().getSnapshot_date().compareTo(fechaIn) > 0 &&
                 musicaNode.getValue().getSnapshot_date().compareTo(fechaOut) < 0 &&
-                musicaNode.getValue().getTempo() > tempoIn &&
-                musicaNode.getValue().getTempo() < tempoOut
+                    musicaNode.getValue().getTempo() > tempoIn &&
+                    musicaNode.getValue().getTempo() < tempoOut
                 ){
                     count += 1;
                 }
@@ -174,13 +171,11 @@ public class Funciones {
         }
         System.out.println("la cantidad de canciones entre el rango de tempo dado y la fecha dado es: " + count);
 
-        long endTime = System.currentTimeMillis();
-        long elapsedTime = endTime - startTime;
-        System.out.println(elapsedTime);
+
     }
 
     public void Top7ArtistasEnTops50 (String fechaIn,String fechaOut){
-        long startTime = System.currentTimeMillis();
+
 
         List<String> todosLosArtistas = new ArrayList<>();
 
@@ -219,14 +214,12 @@ public class Funciones {
             System.out.println(entry.getKey() + ": " + entry.getValue() + " veces");
         }
 
-        long endTime = System.currentTimeMillis();
-        long elapsedTime = endTime - startTime;
-        System.out.println(elapsedTime);
+
     }
 
     public void Top10CancionesEnUnDia (String pais,String fecha){
-        long startTime = System.currentTimeMillis();
-        // Mapa para contar la cantidad de apariciones de cada canción
+
+
         Map<String, Integer> conteoCanciones = new HashMap<>();
 
         MyList<Musica> musicaList = new MyLinkedListImpl<>();
@@ -255,12 +248,12 @@ public class Funciones {
             }
         }
 
-        // Obtener las 10 canciones más populares desde el Min-Heap
+
         Stack<Map.Entry<String, Integer>> stack = new Stack<>();
         while (!minHeap.isEmpty()) {
             stack.push(minHeap.poll());
         }
-        // Imprimir los nombres de las 10 canciones más populares
+
         System.out.println("Las 10 canciones más populares son:");
 
 
@@ -278,9 +271,7 @@ public class Funciones {
             }
         }
 
-        long endTime = System.currentTimeMillis();
-        long elapsedTime = endTime - startTime;
-        System.out.println(elapsedTime);
+
 
     }
 
