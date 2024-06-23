@@ -1,3 +1,5 @@
+El archivo universal_top_spotify_songs.csv debe de estar en la ruta de las carpetas a la altura del readme.txt
+
 Procesos de Carga:
     Se utilizo un FileUtil recibido del practicotad_lic2024 visto en clase
     donde
